@@ -1,0 +1,25 @@
+﻿<Window x:Class="AssimpSample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="SharpGL WPF Application" Height="350" Width="525" 
+        xmlns:sharpGL="clr-namespace:SharpGL.WPF;assembly=SharpGL.WPF" KeyDown="Window_KeyDown">
+    <Grid>
+        <!-- The OpenGL control provides a OpenGL drawing surface. -->
+
+        <sharpGL:OpenGLControl 
+            Name="openGLControl" OpenGLDraw="openGLControl_OpenGLDraw" 
+            OpenGLInitialized="openGLControl_OpenGLInitialized" Resized="openGLControl_Resized"
+            DrawFPS="True" RenderContextType="FBO" FrameRate="10" Margin="0,27,0,0"/>
+
+        <Label FontSize="10" Content="Sirina zatvora:" Foreground="Blue"  HorizontalAlignment="Left" VerticalAlignment="Top" Width="73"/>
+        <Slider Name="widthOfCage" Foreground="blue" HorizontalAlignment="Left" Margin="72,4,0,0" VerticalAlignment="Top" Width="70" ValueChanged="WidhtOfCage" Minimum="160" Maximum="400"/>
+        <Label FontSize="10" Content="Brzina:" Foreground="blue" HorizontalAlignment="Left" Margin="138,0,0,0" VerticalAlignment="Top" Width="45"/>
+        <Label Content="AmbientRGB:" FontSize="10" Margin="250,0,0,0" Foreground="Blue"  HorizontalAlignment="Left" VerticalAlignment="Top" Width="68"/>
+        <Slider Name="cameraRotationSpeedSlider" Foreground="blue" HorizontalAlignment="Left" Margin="178,4,0,0" VerticalAlignment="Top" Width="70"  Minimum="5" Maximum="30" ValueChanged="cameraSpeed"/>
+        <Slider ToolTip="AmrientR" Name="ambientr" Foreground="blue" HorizontalAlignment="Left" Margin="316,4,0,0" VerticalAlignment="Top" Width="70"  Minimum="0" Maximum="1" ValueChanged="ambientColorR"/>
+        <Slider ToolTip="AmrientG" Name="ambientg" Foreground="blue" HorizontalAlignment="Left" Margin="382,4,0,0" VerticalAlignment="Top" Width="70"  Minimum="0" Maximum="1" ValueChanged="ambientColorG"/>
+        <Slider  ToolTip="AmrientB" Name="ambientb" Foreground="blue" HorizontalAlignment="Left" Margin="448,4,0,0" VerticalAlignment="Top" Width="70"  Minimum="0" Maximum="1" ValueChanged="ambientColorB"/>
+
+
+    </Grid>
+</Window>

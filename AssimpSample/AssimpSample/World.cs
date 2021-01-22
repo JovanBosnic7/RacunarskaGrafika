@@ -69,9 +69,7 @@ namespace AssimpSample
 
         private enum TextureObjects { Bricks, Concentrate, Rust };
         private int m_textureCount = Enum.GetNames(typeof(TextureObjects)).Length;
-        private string[] m_textureFiles = { "C:/Users/Jovan/Desktop/IV godina/Racunarska grafika/RA1732017/AssimpSample/AssimpSample/images/bricks.jpg",
-            "C:/Users/Jovan/Desktop/IV godina/Racunarska grafika/RA1732017/AssimpSample/AssimpSample/images/stone.jpg",
-            "C:/Users/Jovan/Desktop/IV godina/Racunarska grafika/RA1732017/AssimpSample/AssimpSample/images/rust.jpg" };
+        private string[] m_textureFiles = { "..//..//images//bricks.jpg", "..//..//images//stone.jpg", "..//..//images//rust.jpg" };
         private uint[] m_textures = null;
         public Boolean m_startAnimation = false;
         private DispatcherTimer animationTimer;
